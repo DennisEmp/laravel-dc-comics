@@ -15,6 +15,14 @@ class MainController extends Controller
         return view('pages.home', compact('people'));
     }
 
+    // function show
+    public function personShow(Person $person) {
+
+        return view('pages.personShow', compact('person'));
+    }
+
+    // function delete
+
     public function personDelete(Person $person) {
 
         $person -> delete();
@@ -22,3 +30,5 @@ class MainController extends Controller
         return redirect() -> route('pages.home');
     }
 }
+
+// errore al return quando si clicca sulla X per la function Delete

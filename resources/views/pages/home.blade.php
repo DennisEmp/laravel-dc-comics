@@ -7,8 +7,9 @@
         @foreach ($people as $person)
 
         <li>
-            
-            {{ $person -> firstName }} {{ $person -> lastName }} - {{ $person -> dateOfBirth }} - {{ $person -> height }} cm
+            <a href="{{ route('person.show', $person) }}">
+                {{ $person -> firstName }} {{ $person -> lastName }} - {{ $person -> dateOfBirth }} - {{ $person -> height }} cm
+            </a>
             -
             <a href="{{ route('person.delete', $person) }}">X</a>
         </li>
