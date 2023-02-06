@@ -4,10 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
- */
-class TaskFactory extends Factory
+class PersonFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +14,9 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            'FirstName' => fake() -> firstName($gender = null|'male'|'female'), 
+            'FirstName' => fake() -> firstName(), 
             'lastName' => fake() -> lastName(),
-            'dateOfBirth' => fake() -> dateTimeBetween('1900-01-01', '2023-02-06')
-            ->format('d/m/Y'),
+            'dateOfBirth' => fake() -> dateTimeBetween('1900-01-01', '2023-02-06'),
             'height' => fake() -> randomFloat(2, 100, 600),
         ];
     }

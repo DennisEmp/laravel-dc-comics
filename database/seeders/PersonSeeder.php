@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Person;
 
-class TaskSeeder extends Seeder
+class PersonSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,9 +16,5 @@ class TaskSeeder extends Seeder
     public function run()
     {
         Person::factory() -> count(100) -> create();
-
-        $this -> call([
-            TaskSeeder::class,
-        ]);
     }
 }
