@@ -27,8 +27,6 @@ class MainController extends Controller
 
         $person -> delete();
     
-        return redirect() -> route('pages.home');
+        return redirect() -> route('home');
     }
 }
-
-// errore al return quando si clicca sulla X per la function Delete
